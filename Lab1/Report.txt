@@ -1,0 +1,1 @@
+For each exercise, I completed each step in the book and successfully compiled and ran the application in both an emulator and on my own android device. I did not use completed code for Exercise 3-1, as I used my own.

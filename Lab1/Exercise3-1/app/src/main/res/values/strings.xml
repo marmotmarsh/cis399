@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Invoice Total</string>
+    <string name="subtotalField"></string>
+    <string name="discountPercentField"></string>
+    <string name="discountAmountField"></string>
+    <string name="totalField"></string>
+</resources>
