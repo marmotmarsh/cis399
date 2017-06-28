@@ -3,6 +3,7 @@ package com.murach.tipcalculator;
 import java.text.NumberFormat;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -71,7 +72,7 @@ implements OnEditorActionListener, OnClickListener {
         super.onResume();
         
         // get the instance variables
-        billAmountString = savedValues.getString("billAmountString", "");
+        billAmountString = savedValues.getString("billAmountString", "0");
         tipPercent = savedValues.getFloat("tipPercent", 0.15f);
 
         // set the bill amount on its widget
@@ -82,11 +83,18 @@ implements OnEditorActionListener, OnClickListener {
     }    
     
     public void calculateAndDisplay() {        
-
         // get the bill amount
         billAmountString = billAmountEditText.getText().toString();
-        float billAmount = Float.parseFloat(billAmountString);
-        
+        float billAmount;
+
+        try {
+            billAmount = Float.parseFloat(billAmountString);
+        } catch (NumberFormatException e) {
+            Log.d("CalcAndDisplay", "Illegal amount, setting to 0.");
+            // You have to set this value to something so that userNth is defined!
+            billAmount = 0;
+        }
+
         // calculate tip and total 
         float tipAmount = billAmount * tipPercent;
         float totalAmount = billAmount + tipAmount;

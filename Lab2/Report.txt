@@ -1,0 +1,1 @@
+C. I did not complete the exercise, as I had trouble running the application in the emulator (possibly due to different version, I'm not sure), but I did read through it, and much of what is happening here are things I implemented in Lab 1.
