@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab3\\Exercise8-1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_settings.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab3\\Exercise8-1\\app\\src\\main\\res\\drawable-xhdpi\\ic_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab3\\Exercise8-1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_settings_new.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab3\\Exercise8-1\\app\\src\\main\\res\\drawable-xhdpi\\ic_settings_new.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab3\\Exercise8-1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_refresh.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab3\\Exercise8-1\\app\\src\\main\\res\\drawable-xhdpi\\ic_refresh.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab3\\Exercise8-1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_about.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab3\\Exercise8-1\\app\\src\\main\\res\\drawable-xhdpi\\ic_about.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab3\\Exercise8-1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_search.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab3\\Exercise8-1\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab3\\Exercise8-1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab3\\Exercise8-1\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    }
+]
