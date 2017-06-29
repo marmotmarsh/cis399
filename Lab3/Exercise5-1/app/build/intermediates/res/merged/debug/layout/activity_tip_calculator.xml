@@ -1,11 +1,11 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp" >
 
     <!-- The bill amount -->
-
+    <TableRow>
     <TextView
         android:id="@+id/billAmountLabel"
         android:layout_width="wrap_content"
@@ -19,9 +19,7 @@
         android:id="@+id/billAmountEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/billAmountLabel"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@+id/billAmountLabel"
+        android:layout_span="3"
         android:ems="8"
         android:inputType="numberDecimal"
         android:text="@string/bill_amount"
@@ -29,15 +27,15 @@
 
         <requestFocus />
     </EditText>
+    </TableRow>
 
     <!-- The tip percent -->
-    
+
+    <TableRow>
     <TextView
         android:id="@+id/percentLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/billAmountLabel"
-        android:layout_below="@+id/billAmountLabel"
         android:padding="10dp"
         android:text="@string/tip_percent_label"
         android:textSize="20sp"
@@ -47,8 +45,6 @@
         android:id="@+id/percentTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/percentLabel"
-        android:layout_alignLeft="@+id/billAmountEditText"
         android:padding="5dp"
         android:text="@string/tip_percent"
         android:textSize="20sp" />
@@ -57,9 +53,6 @@
         android:id="@+id/percentDownButton"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_alignBaseline="@+id/percentTextView"
-        android:layout_marginLeft="25dp"
-        android:layout_toRightOf="@+id/percentTextView"
         android:text="@string/decrease"
         android:textSize="20sp" />
 
@@ -67,19 +60,17 @@
         android:id="@+id/percentUpButton"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_alignBaseline="@+id/percentDownButton"
-        android:layout_toRightOf="@+id/percentDownButton"
         android:text="@string/increase"
         android:textSize="20sp" />
+    </TableRow>
 
     <!-- the tip amount -->
-    
+
+    <TableRow>
     <TextView
         android:id="@+id/tipLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/percentLabel"
-        android:layout_below="@+id/percentLabel"
         android:padding="10dp"
         android:text="@string/tip_amount_label"
         android:textSize="20sp"
@@ -89,20 +80,19 @@
         android:id="@+id/tipTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tipLabel"
-        android:layout_alignLeft="@id/billAmountEditText"
+        android:layout_span="3"
         android:padding="5dp"
         android:text="@string/tip_amount"
         android:textSize="20sp" />
+    </TableRow>
 
     <!-- the total -->
-    
+
+    <TableRow>
     <TextView
         android:id="@+id/totalLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tipLabel"
-        android:layout_below="@+id/tipLabel"
         android:padding="10dp"
         android:text="@string/total_amount_label"
         android:textSize="20sp"
@@ -112,10 +102,9 @@
         android:id="@+id/totalTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/totalLabel"
-        android:layout_alignLeft="@+id/tipTextView"
+        android:layout_span="3"
         android:padding="5dp"
         android:text="@string/total_amount"
-        android:textSize="20sp" />    
-
-</RelativeLayout>
+        android:textSize="20sp" />
+    </TableRow>
+</TableLayout>
