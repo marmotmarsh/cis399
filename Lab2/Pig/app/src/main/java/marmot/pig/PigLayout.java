@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PigLayout extends AppCompatActivity implements Button.OnClickListener,
         EditText.OnEditorActionListener {
@@ -176,6 +177,18 @@ public class PigLayout extends AppCompatActivity implements Button.OnClickListen
             score1Text.setText(String.format("%d", pigGame.getPlayer1Score()));
         } else {
             score2Text.setText(String.format("%d", pigGame.getPlayer2Score()));
+
+            if (pigGame.isFinalTurn()) {
+                if (pigGame.getPlayer1Score() > pigGame.getPlayer2Score()) {
+                    Toast.makeText(this, "Player 1 has won", Toast.LENGTH_LONG).show();
+                    newGame();
+                    return;
+                } else if (pigGame.getPlayer2Score() > pigGame.getPlayer1Score()) {
+                    Toast.makeText(this, "Player 2 has won", Toast.LENGTH_LONG).show();
+                    newGame();
+                    return;
+                }
+            }
         }
 
         currentScoreText.setText(String.format("%d", 0));

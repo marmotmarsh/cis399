@@ -12,6 +12,10 @@ public class PigGame {
     private int currentTurn;
     private int currentScore;
 
+    private boolean finalTurn;
+
+    private final int WINNING_SCORE = 100;
+
     public PigGame() {
         player1Name = "";
         player2Name = "";
@@ -19,6 +23,7 @@ public class PigGame {
         player2Score = 0;
         currentTurn = 1;
         currentScore = 0;
+        finalTurn = false;
     }
 
     public int rollDie() {
@@ -38,8 +43,14 @@ public class PigGame {
 
         if (currentTurn == 1) {
             player1Score += currentScore;
+            if (player1Score >= WINNING_SCORE) {
+                finalTurn = true;
+            }
         } else {
             player2Score += currentScore;
+            if (player2Score >= WINNING_SCORE) {
+                finalTurn = true;
+            }
         }
 
         currentScore = 0;
@@ -105,5 +116,13 @@ public class PigGame {
 
     public void setCurrentScore(int currentScore) {
         this.currentScore = currentScore;
+    }
+
+    public boolean isFinalTurn() {
+        return finalTurn;
+    }
+
+    public void setFinalTurn(boolean finalTurn) {
+        this.finalTurn = finalTurn;
     }
 }
