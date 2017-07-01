@@ -5,20 +5,33 @@ package marmot.pig;
  */
 
 public class PigGame {
+    // Game Information
     private String player1Name;
     private String player2Name;
     private int player1Score;
     private int player2Score;
     private int currentTurn;
     private int currentScore;
+    private boolean finalTurn;
+
+    // Default Constants
+    private final int[] WINNING_SCORES = {50, 100, 200, 500};
+
+    // Preferences
+    private int winningScore = 1;
+    private boolean useAI = false;
 
     public PigGame() {
         player1Name = "";
         player2Name = "";
+
         player1Score = 0;
         player2Score = 0;
+
         currentTurn = 1;
         currentScore = 0;
+
+        finalTurn = false;
     }
 
     public int rollDie() {
@@ -38,8 +51,14 @@ public class PigGame {
 
         if (currentTurn == 1) {
             player1Score += currentScore;
+            if (player1Score >= WINNING_SCORES[winningScore]) {
+                finalTurn = true;
+            }
         } else {
             player2Score += currentScore;
+            if (player2Score >= WINNING_SCORES[winningScore]) {
+                finalTurn = true;
+            }
         }
 
         currentScore = 0;
@@ -55,6 +74,7 @@ public class PigGame {
         player2Score = 0;
         currentScore = 0;
         currentTurn = 1;
+        finalTurn = false;
     }
 
     // Getters and Setters
@@ -105,5 +125,29 @@ public class PigGame {
 
     public void setCurrentScore(int currentScore) {
         this.currentScore = currentScore;
+    }
+
+    public boolean isFinalTurn() {
+        return finalTurn;
+    }
+
+    public void setFinalTurn(boolean finalTurn) {
+        this.finalTurn = finalTurn;
+    }
+
+    public int getWinningScore() {
+        return winningScore;
+    }
+
+    public void setWinningScore(int winningScore) {
+        this.winningScore = winningScore;
+    }
+
+    public boolean isUseAI() {
+        return useAI;
+    }
+
+    public void setUseAI(boolean useAI) {
+        this.useAI = useAI;
     }
 }

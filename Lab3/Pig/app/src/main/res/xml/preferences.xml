@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="pref_winning_score"
+        android:title="@string/winning_score"
+        android:summary="@string/winning_score_summary"
+        android:dialogTitle="@string/winning_score"
+        android:entries="@array/winning_score_array"
+        android:entryValues="@array/winning_score_values"
+        android:defaultValue="@string/winning_score_default" />
+
+    <CheckBoxPreference
+        android:key="pref_ai_mode"
+        android:title="@string/ai_mode"
+        android:summary="@string/ai_mode_summary"
+        android:defaultValue="false" />
+</PreferenceScreen>

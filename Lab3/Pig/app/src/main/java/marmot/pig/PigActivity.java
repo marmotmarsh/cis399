@@ -1,18 +1,23 @@
 package marmot.pig;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class PigLayout extends AppCompatActivity implements Button.OnClickListener,
+public class PigActivity extends AppCompatActivity implements Button.OnClickListener,
         EditText.OnEditorActionListener {
     // Gather Widgets and Things
     private EditText player1Text;
@@ -27,7 +32,7 @@ public class PigLayout extends AppCompatActivity implements Button.OnClickListen
     private Button newGameButton;
 
     // Other Objects
-    PigGame pigGame;
+    private PigGame pigGame;
 
     // Shared Information
     private SharedPreferences savedValues;
@@ -56,6 +61,9 @@ public class PigLayout extends AppCompatActivity implements Button.OnClickListen
         rollDieButton.setOnClickListener(this);
         endTurnButton.setOnClickListener(this);
         newGameButton.setOnClickListener(this);
+
+        // set the default values for the preferences
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
 
         savedValues = getSharedPreferences("SavedValues", MODE_PRIVATE);
     }
@@ -86,6 +94,10 @@ public class PigLayout extends AppCompatActivity implements Button.OnClickListen
         pigGame.setPlayer2Score(savedValues.getInt("player2Score", 0));
         pigGame.setCurrentTurn(savedValues.getInt("currentTurn", 1));
         pigGame.setCurrentScore(savedValues.getInt("currentScore", 0));
+
+        String win = savedValues.getString("pref_winning_score", "17");
+        Log.d("WINNING_SCORE", String.valueOf(win));
+        //pigGame.setWinningScore(win);
 
         player1Text.setText(pigGame.getPlayer1Name());
         player2Text.setText(pigGame.getPlayer2Name());
@@ -128,6 +140,29 @@ public class PigLayout extends AppCompatActivity implements Button.OnClickListen
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_pig, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_settings:
+                // Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+                return true;
+            case R.id.menu_about:
+                // Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "This is a blurb about the app. This app is about a pig.", Toast.LENGTH_LONG).show();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void setCurrentTurnText() {
@@ -176,11 +211,25 @@ public class PigLayout extends AppCompatActivity implements Button.OnClickListen
             score1Text.setText(String.format("%d", pigGame.getPlayer1Score()));
         } else {
             score2Text.setText(String.format("%d", pigGame.getPlayer2Score()));
+
+            if (pigGame.isFinalTurn()) {
+                if (pigGame.getPlayer1Score() > pigGame.getPlayer2Score()) {
+                    Toast.makeText(this, "Player 1 has won", Toast.LENGTH_LONG).show();
+                    newGame();
+                    return;
+                } else if (pigGame.getPlayer2Score() > pigGame.getPlayer1Score()) {
+                    Toast.makeText(this, "Player 2 has won", Toast.LENGTH_LONG).show();
+                    newGame();
+                    return;
+                }
+            }
         }
 
         currentScoreText.setText(String.format("%d", 0));
 
         setCurrentTurnText();
+
+        Log.d("WINNING_SCORE", String.valueOf(pigGame.getWinningScore()));
     }
 
     public void newGame() {
