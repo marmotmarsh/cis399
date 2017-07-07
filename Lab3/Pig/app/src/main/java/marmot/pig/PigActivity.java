@@ -63,9 +63,9 @@ public class PigActivity extends AppCompatActivity implements Button.OnClickList
         newGameButton.setOnClickListener(this);
 
         // set the default values for the preferences
-        PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
-        savedValues = getSharedPreferences("SavedValues", MODE_PRIVATE);
+        savedValues = PreferenceManager.getDefaultSharedPreferences(this);
     }
 
     @Override
@@ -94,10 +94,10 @@ public class PigActivity extends AppCompatActivity implements Button.OnClickList
         pigGame.setPlayer2Score(savedValues.getInt("player2Score", 0));
         pigGame.setCurrentTurn(savedValues.getInt("currentTurn", 1));
         pigGame.setCurrentScore(savedValues.getInt("currentScore", 0));
-
-        String win = savedValues.getString("pref_winning_score", "17");
-        Log.d("WINNING_SCORE", String.valueOf(win));
-        //pigGame.setWinningScore(win);
+        pigGame.setWinningScore(Integer.valueOf(savedValues.getString("pref_winning_score", "1")));
+        pigGame.setUseAI(savedValues.getBoolean("pref_ai_mode", false));
+        pigGame.setDieSides(Integer.valueOf(savedValues.getString("pref_die_sides", "6")));
+        pigGame.setMaxCpuRolls(Integer.valueOf(savedValues.getString("pref_ai_max_rolls", "10")));
 
         player1Text.setText(pigGame.getPlayer1Name());
         player2Text.setText(pigGame.getPlayer2Name());
@@ -207,11 +207,14 @@ public class PigActivity extends AppCompatActivity implements Button.OnClickList
     public void endTurn() {
         int endingTurn = pigGame.endTurn();
 
-        if (endingTurn == 1) {
-            score1Text.setText(String.format("%d", pigGame.getPlayer1Score()));
-        } else {
-            score2Text.setText(String.format("%d", pigGame.getPlayer2Score()));
+        score1Text.setText(String.format("%d", pigGame.getPlayer1Score()));
+        score2Text.setText(String.format("%d", pigGame.getPlayer2Score()));
 
+        if (pigGame.isUseAI()) {
+            Toast.makeText(this, "Player 2 scored " + String.valueOf(pigGame.getCpuTurnScore()) + " points", Toast.LENGTH_SHORT).show();
+        }
+
+        if (endingTurn == 2) {
             if (pigGame.isFinalTurn()) {
                 if (pigGame.getPlayer1Score() > pigGame.getPlayer2Score()) {
                     Toast.makeText(this, "Player 1 has won", Toast.LENGTH_LONG).show();
@@ -228,8 +231,6 @@ public class PigActivity extends AppCompatActivity implements Button.OnClickList
         currentScoreText.setText(String.format("%d", 0));
 
         setCurrentTurnText();
-
-        Log.d("WINNING_SCORE", String.valueOf(pigGame.getWinningScore()));
     }
 
     public void newGame() {

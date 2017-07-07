@@ -1,5 +1,7 @@
 package marmot.pig;
 
+import android.util.Log;
+
 /**
  * Created by marmot on 6/27/2017.
  */
@@ -13,6 +15,7 @@ public class PigGame {
     private int currentTurn;
     private int currentScore;
     private boolean finalTurn;
+    private int cpuTurnScore;
 
     // Default Constants
     private final int[] WINNING_SCORES = {50, 100, 200, 500};
@@ -20,6 +23,8 @@ public class PigGame {
     // Preferences
     private int winningScore = 1;
     private boolean useAI = false;
+    private int dieSides = 6;
+    private int maxCpuRolls = 10;
 
     public PigGame() {
         player1Name = "";
@@ -35,7 +40,7 @@ public class PigGame {
     }
 
     public int rollDie() {
-        int roll = (int)(Math.random() * 6 + 1);
+        int roll = (int)(Math.random() * dieSides + 1);
 
         if (roll == 1) {
             currentScore = 0;
@@ -54,6 +59,10 @@ public class PigGame {
             if (player1Score >= WINNING_SCORES[winningScore]) {
                 finalTurn = true;
             }
+
+            if (useAI) {
+                return computerTurn();
+            }
         } else {
             player2Score += currentScore;
             if (player2Score >= WINNING_SCORES[winningScore]) {
@@ -67,6 +76,39 @@ public class PigGame {
         currentTurn += 1;
 
         return endingTurn;
+    }
+
+    private int computerTurn() {
+        int roll;
+        int currentRolls = 0;
+
+        // Naive optimal gameplay
+        int turnGoal = ((dieSides * (dieSides + 1)) / 2) - 1;
+
+        if (WINNING_SCORES[winningScore] - player2Score < turnGoal) {
+            turnGoal = WINNING_SCORES[winningScore] - player2Score;
+        }
+        currentScore = 0;
+
+        do {
+            roll = rollDie();
+            if (roll == 1) {
+                currentScore = 0;
+                break;
+            }
+            currentRolls += 1;
+        } while (currentScore < turnGoal & currentRolls < maxCpuRolls);
+
+        cpuTurnScore = currentScore;
+
+        player2Score += currentScore;
+        currentScore = 0;
+
+        if (player2Score >= WINNING_SCORES[winningScore]) {
+            finalTurn = true;
+        }
+
+        return 2;
     }
 
     public void newGame() {
@@ -149,5 +191,29 @@ public class PigGame {
 
     public void setUseAI(boolean useAI) {
         this.useAI = useAI;
+    }
+
+    public int getCpuTurnScore() {
+        return cpuTurnScore;
+    }
+
+    public void setCpuTurnScore(int cpuTurnScore) {
+        this.cpuTurnScore = cpuTurnScore;
+    }
+
+    public int getDieSides() {
+        return dieSides;
+    }
+
+    public void setDieSides(int dieSides) {
+        this.dieSides = dieSides;
+    }
+
+    public int getMaxCpuRolls() {
+        return maxCpuRolls;
+    }
+
+    public void setMaxCpuRolls(int maxCpuRolls) {
+        this.maxCpuRolls = maxCpuRolls;
     }
 }

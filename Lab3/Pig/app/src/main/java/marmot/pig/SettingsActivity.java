@@ -1,9 +1,13 @@
 package marmot.pig;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.preference.PreferenceActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 /**
  * Created by marmot on 6/29/2017.

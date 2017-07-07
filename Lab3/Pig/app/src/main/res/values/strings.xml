@@ -25,6 +25,8 @@
 
     <string name="title_settings_activity">Settings</string>
 
+    <string name="game_category">Game Settings</string>
+
     <string name="winning_score">Winning Score</string>
     <string name="winning_score_summary">Choose a score to play to.</string>
     <string-array name="winning_score_array">
@@ -41,8 +43,54 @@
     </string-array>
     <string name="winning_score_default">1</string>
 
+    <string name="die_sides">Die Value</string>
+    <string name="die_sides_summary">Choose the number of sides for the die.</string>
+    <string-array name="die_sides_array">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="die_sides_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string name="die_sides_default">6</string>
+
+    <string name="ai_category">AI Settings</string>
+
     <string name="ai_mode">AI Mode</string>
     <string name="ai_mode_summary">Play against a computer?</string>
+
+    <string name="ai_max_rolls">Maximum CPU Rolls</string>
+    <string name="ai_max_rolls_summary">Choose the maximum number of rolls the computer can make in one turn.</string>
+    <string-array name="ai_max_rolls_array">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="ai_max_rolls_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string name="ai_max_rolls_default">10</string>
 
 
 </resources>
