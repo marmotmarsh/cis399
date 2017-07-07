@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/game_category"
+        android:key="pref_game_category">
+
+        <ListPreference
+            android:key="pref_winning_score"
+            android:title="@string/winning_score"
+            android:summary="@string/winning_score_summary"
+            android:dialogTitle="@string/winning_score"
+            android:entries="@array/winning_score_array"
+            android:entryValues="@array/winning_score_values"
+            android:defaultValue="@string/winning_score_default" />
+
+        <ListPreference
+            android:key="pref_die_sides"
+            android:title="@string/die_sides"
+            android:summary="@string/die_sides_summary"
+            android:dialogTitle="@string/die_sides"
+            android:entries="@array/die_sides_array"
+            android:entryValues="@array/die_sides_values"
+            android:defaultValue="@string/die_sides_default" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/ai_category"
+        android:key="pref_ai_category">
+
+        <CheckBoxPreference
+            android:key="pref_ai_mode"
+            android:title="@string/ai_mode"
+            android:summary="@string/ai_mode_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="pref_ai_max_rolls"
+            android:title="@string/ai_max_rolls"
+            android:summary="@string/ai_max_rolls_summary"
+            android:dialogTitle="@string/ai_max_rolls"
+            android:dependency="pref_ai_mode"
+            android:entries="@array/ai_max_rolls_array"
+            android:entryValues="@array/ai_max_rolls_values"
+            android:defaultValue="@string/ai_max_rolls_default" />
+    </PreferenceCategory>
+</PreferenceScreen>

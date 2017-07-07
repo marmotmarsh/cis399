@@ -1,0 +1,96 @@
+<resources>
+    <string name="title_pig_activity">Pig</string>
+
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About</string>
+
+    <string name="player1_text">Player 1</string>
+    <string name="player2_text">Player 2</string>
+
+    <string name="score">Score</string>
+
+    <string name="score1_text">0</string>
+    <string name="score2_text">0</string>
+
+    <string name="current_turn">\'s turn</string>
+
+    <string name="current_score">0</string>
+    <string name="current_score_label">Points for this turn</string>
+
+    <string name="roll_die_button">Roll Die</string>
+    <string name="end_turn_button">End Turn</string>
+    <string name="new_game_button">New Game</string>
+
+    <!-- Preferences -->
+
+    <string name="title_settings_activity">Settings</string>
+
+    <string name="game_category">Game Settings</string>
+
+    <string name="winning_score">Winning Score</string>
+    <string name="winning_score_summary">Choose a score to play to.</string>
+    <string-array name="winning_score_array">
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+    </string-array>
+    <string-array name="winning_score_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string name="winning_score_default">1</string>
+
+    <string name="die_sides">Die Value</string>
+    <string name="die_sides_summary">Choose the number of sides for the die.</string>
+    <string-array name="die_sides_array">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="die_sides_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string name="die_sides_default">6</string>
+
+    <string name="ai_category">AI Settings</string>
+
+    <string name="ai_mode">AI Mode</string>
+    <string name="ai_mode_summary">Play against a computer?</string>
+
+    <string name="ai_max_rolls">Maximum CPU Rolls</string>
+    <string name="ai_max_rolls_summary">Choose the maximum number of rolls the computer can make in one turn.</string>
+    <string-array name="ai_max_rolls_array">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="ai_max_rolls_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string name="ai_max_rolls_default">10</string>
+
+
+</resources>
