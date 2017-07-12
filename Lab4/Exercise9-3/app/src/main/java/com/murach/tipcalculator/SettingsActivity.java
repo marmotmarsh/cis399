@@ -10,6 +10,7 @@ public class SettingsActivity extends Activity {
         super.onCreate(savedInstanceState);
         
         // Set the view for the activity using XML
-        setContentView(R.layout.activity_settings);
-    }
+        getFragmentManager().beginTransaction()
+                .replace(android.R.id.content, new SettingsFragment())
+                .commit();    }
 }
