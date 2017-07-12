@@ -204,7 +204,7 @@ implements OnEditorActionListener, OnClickListener {
         if (settingsFragment == null) {
             inflater.inflate(R.menu.fragment_tip_calculator, menu);
         } else {
-            inflater.inflate(R.menu.fragment_tip_calculator_twopane, menu);
+            // inflater.inflate(R.menu.fragment_tip_calculator_twopane, menu);
         }
     }
 
