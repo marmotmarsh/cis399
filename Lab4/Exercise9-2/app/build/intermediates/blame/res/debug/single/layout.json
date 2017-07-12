@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_tip_calculator.xml",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\src\\main\\res\\layout\\fragment_tip_calculator.xml"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_about.xml",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\src\\main\\res\\layout\\fragment_about.xml"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main_twopane_land.xml",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\src\\main\\res\\layout\\activity_main_twopane_land.xml"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_about.xml",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\src\\main\\res\\layout\\activity_about.xml"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main_twopane_port.xml",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\src\\main\\res\\layout\\activity_main_twopane_port.xml"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_settings.xml",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-2\\app\\src\\main\\res\\layout\\activity_settings.xml"
+    }
+]
