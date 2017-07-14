@@ -6,7 +6,7 @@ import android.util.Log;
  * Created by marmot on 6/27/2017.
  */
 
-public class PigGame {
+public class PigGameLogic {
     // Game Information
     private String player1Name;
     private String player2Name;
@@ -26,7 +26,7 @@ public class PigGame {
     private int dieSides = 6;
     private int maxCpuRolls = 10;
 
-    public PigGame() {
+    public PigGameLogic() {
         player1Name = "";
         player2Name = "";
 

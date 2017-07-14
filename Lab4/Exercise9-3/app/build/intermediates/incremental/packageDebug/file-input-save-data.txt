@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jul 12 15:26:15 PDT 2017
+#Fri Jul 14 12:28:50 PDT 2017
 8.set=ANDROID_RESOURCE
 1.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 1.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
@@ -10,16 +10,16 @@
 5.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_
 5.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_main_twopane_land.xml
 7.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_
-7.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
-11.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\fragment_tip_calculator.xml
+7.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\fragment_tip_calculator.xml
+11.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\ic_launcher.png
 11.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_
 9.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_
-9.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-mdpi-v4\\ic_launcher.png
-13.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_settings.xml
+9.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\fragment_tip_calculator.xml
+13.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_about.xml
 13.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_
 11.set=ANDROID_RESOURCE
 0.set=ANDROID_RESOURCE
-15.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_about.xml
+15.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\preferences.xml
 15.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_
 7.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
@@ -33,16 +33,16 @@
 4.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_main_twopane_port.xml
 4.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_
 6.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_
-6.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-mdpi-v4\\ic_action_search.png
+6.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
 10.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_
-10.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\ic_about.png
+10.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\ic_settings.png
 13.set=ANDROID_RESOURCE
 8.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_
-8.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\fragment_tip_calculator.xml
+8.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\ic_about.png
 2.set=ANDROID_RESOURCE
-12.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\ic_settings.png
+12.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_settings.xml
 12.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_
-14.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\preferences.xml
+14.file=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\ic_action_search.png
 14.base=C\:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab4\\Exercise9-3\\app\\build\\intermediates\\res\\resources-debug.ap_
 9.set=ANDROID_RESOURCE
 count=16

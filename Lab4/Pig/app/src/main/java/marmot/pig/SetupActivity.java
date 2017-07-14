@@ -3,7 +3,11 @@ package marmot.pig;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class PigActivity extends Activity {
+/**
+ * Created by marmot on 7/13/2017.
+ */
+
+public class SetupActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -11,7 +15,7 @@ public class PigActivity extends Activity {
 
         // set the view for the activity using XML
         getFragmentManager().beginTransaction()
-                .replace(android.R.id.content, new PigFragment())
+                .replace(android.R.id.content, new SetupFragment())
                 .commit();
     }
 }
