@@ -28,8 +28,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class ItemsActivity extends Activity 
-implements OnItemClickListener {
+public class ItemsActivity extends Activity implements OnItemClickListener {
 
     private final String URL_STRING = "http://rss.cnn.com/rss/cnn_tech.rss";
     private final String FILENAME = "news_feed.xml";

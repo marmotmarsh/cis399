@@ -6,27 +6,27 @@ import org.xml.sax.*;
 public class RSSFeedHandler extends DefaultHandler {
     private RSSFeed feed;
     private RSSItem item;
-    
+
     private boolean feedTitleHasBeenRead = false;
     private boolean feedPubDateHasBeenRead = false;
-    
+
     private boolean isTitle = false;
     private boolean isDescription = false;
     private boolean isLink = false;
     private boolean isPubDate = false;
-    
+
     public RSSFeed getFeed() {
         return feed;
     }
-        
+
     public void startDocument() throws SAXException {
         feed = new RSSFeed();
         item = new RSSItem();
     }
-    
-    public void startElement(String namespaceURI, String localName, 
-            String qName, Attributes atts) throws SAXException {
-        
+
+    public void startElement(String namespaceURI, String localName,
+                             String qName, Attributes atts) throws SAXException {
+
         if (qName.equals("item")) {
             item = new RSSItem();
             return;
@@ -48,16 +48,16 @@ public class RSSFeedHandler extends DefaultHandler {
             return;
         }
     }
-    
-    public void endElement(String namespaceURI, String localName, 
-            String qName) throws SAXException
+
+    public void endElement(String namespaceURI, String localName,
+                           String qName) throws SAXException
     {
         if (qName.equals("item")) {
             feed.addItem(item);
             return;
         }
     }
-     
+
     public void characters(char ch[], int start, int length)
     {
         String s = new String(ch, start, length);
@@ -65,7 +65,7 @@ public class RSSFeedHandler extends DefaultHandler {
             if (feedTitleHasBeenRead == false) {
                 feed.setTitle(s);
                 feedTitleHasBeenRead = true;
-            } 
+            }
             else {
                 item.setTitle(s);
             }
@@ -93,6 +93,6 @@ public class RSSFeedHandler extends DefaultHandler {
                 item.setPubDate(s);
             }
             isPubDate = false;
-        }        
+        }
     }
 }
