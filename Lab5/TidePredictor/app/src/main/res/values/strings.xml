@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tide Predictor</string>
+
+    <string name="items_title">Tides in Florence Oregon</string>
+
+    <string name="item_date">Monday</string>
+    <string name="item_tide_type">H</string>
+    <string name="item_vertical">1.0</string>
+</resources>
