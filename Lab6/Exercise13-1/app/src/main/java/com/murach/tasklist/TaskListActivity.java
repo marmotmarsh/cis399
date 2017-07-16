@@ -23,6 +23,10 @@ public class TaskListActivity extends Activity {
         if (insertId > 0) {
             sb.append("Row inserted! Insert Id: " + insertId + "\n");
         }
+
+        // insert another task
+        Task task2 = new Task(1, "Take car in for oil change", "", "0", "0");
+        long insertId2 = db.insertTask(task2);
         
         // update a task
         task.setId((int) insertId);
@@ -37,6 +41,9 @@ public class TaskListActivity extends Activity {
         if (deleteCount == 1) {
             sb.append("Task deleted! Delete count: " + deleteCount + "\n\n");
         }
+
+        // delete more tasks
+        db.deleteTask(insertId2);
         
         // display all tasks (id + name)
         ArrayList<Task> tasks = db.getTasks("Personal");

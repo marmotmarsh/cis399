@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_action_add.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-1\\app\\src\\main\\res\\drawable-ldpi\\ic_action_add.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-1\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_action_delete.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-1\\app\\src\\main\\res\\drawable-ldpi\\ic_action_delete.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_action_save.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-1\\app\\src\\main\\res\\drawable-ldpi\\ic_action_save.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_action_cancel.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-1\\app\\src\\main\\res\\drawable-ldpi\\ic_action_cancel.png"
+    }
+]
