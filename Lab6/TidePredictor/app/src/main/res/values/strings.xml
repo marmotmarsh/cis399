@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tide Predictor</string>
+
+    <string name="items_title">Tides in Florence Oregon</string>
+
+    <string name="item_date">01/01/2017</string>
+    <string name="item_day">Sunday</string>
+    <string name="item_tide_type">H</string>
+    <string name="item_time">12:00 AM</string>
+
+    <string name="item_error">Unable to show tides.</string>
+</resources>
