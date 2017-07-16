@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_check_off_holo_light.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\src\\main\\res\\drawable-hdpi\\btn_check_off_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\btn_check_on_holo_light.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\src\\main\\res\\drawable-hdpi\\btn_check_on_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_search.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\src\\main\\res\\drawable-hdpi\\ic_action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_delete.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\src\\main\\res\\drawable-hdpi\\ic_action_delete.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_add.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\src\\main\\res\\drawable-hdpi\\ic_action_add.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_cancel.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\src\\main\\res\\drawable-hdpi\\ic_action_cancel.png"
+    },
+    {
+        "merged": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_save.png",
+        "source": "C:\\Users\\marmot\\Documents\\Workspace\\cis399\\Lab6\\Exercise13-2\\app\\src\\main\\res\\drawable-hdpi\\ic_action_save.png"
+    }
+]
