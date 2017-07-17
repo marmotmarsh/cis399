@@ -1,7 +1,10 @@
 <resources>
+
     <string name="app_name">Tide Predictor</string>
 
-    <string name="items_title">Tides in Florence Oregon</string>
+    <!-- Listview strings -->
+
+    <string name="item_title">Tides in Florence Oregon</string>
 
     <string name="item_date">01/01/2017</string>
     <string name="item_day">Sunday</string>
@@ -9,4 +12,31 @@
     <string name="item_time">12:00 AM</string>
 
     <string name="item_error">Unable to show tides.</string>
+
+    <!-- Setup strings -->
+
+    <string-array name="locations_array_keys">
+        <item>Coos Bay</item>
+        <item>Florence</item>
+        <item>Gold Beach</item>
+    </string-array>
+    <string-array name="locations_array_values">
+        <item>coos_bay</item>
+        <item>florence</item>
+        <item>gold_beach</item>
+    </string-array>
+
+    <string-array name="dates_array_keys">
+        <item>January 1, 2017</item>
+        <item>January 2, 2017</item>
+        <item>January 3, 2017</item>
+    </string-array>
+    <string-array name="dates_array_values">
+        <item>2017/01/01</item>
+        <item>2017/01/02</item>
+        <item>2017/01/03</item>
+    </string-array>
+
+    <string name="show_items_button">Show Tides</string>
+
 </resources>

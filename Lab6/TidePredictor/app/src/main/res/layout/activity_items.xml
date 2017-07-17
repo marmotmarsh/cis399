@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:background="#2683c6"
         android:padding="7dp"
-        android:text="@string/items_title"
+        android:text="@string/item_title"
         android:textSize="22sp" />
 
     <ListView

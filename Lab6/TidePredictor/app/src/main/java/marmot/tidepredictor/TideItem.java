@@ -9,21 +9,61 @@ import java.util.Date;
  */
 
 public class TideItem {
+    private int tideId;
+    private int listId;
     private String date;
     private String day;
     private String time;
-    private int predCm;
+    private String predCm;
     private String type;
 
     private SimpleDateFormat dateOutFormat = new SimpleDateFormat("MMMM dd, yyyy");
     private SimpleDateFormat dateInFormat = new SimpleDateFormat("yyyy/MM/dd");
 
-    public TideItem(String inDate, String inDay, String inTime, String inPredCm, String typeHL) {
-        date = inDate;
-        day = inDay;
-        time = inTime;
-        predCm = Integer.valueOf(inPredCm);
-        type = typeHL;
+    public static final String TRUE = "1";
+    public static final String FALSE = "0";
+
+    public TideItem() {
+        this.date = "";
+        this.day = "";
+        this.time = "";
+        this.predCm = "";
+        this.type = "";
+    }
+
+    public TideItem(int listId, String inDate, String inDay, String inTime, String inPredCm, String typeHL) {
+        this.listId = listId;
+        this.date = inDate;
+        this.day = inDay;
+        this.time = inTime;
+        this.predCm = inPredCm;
+        this.type = typeHL;
+    }
+
+    public TideItem(int taskId, int listId, String inDate, String inDay, String inTime, String inPredCm, String typeHL) {
+        this.tideId = taskId;
+        this.listId = listId;
+        this.date = inDate;
+        this.day = inDay;
+        this.time = inTime;
+        this.predCm = inPredCm;
+        this.type = typeHL;
+    }
+
+    public int getTideId() {
+        return tideId;
+    }
+
+    public void setTideId(int tideId) {
+        this.tideId = tideId;
+    }
+
+    public int getListId() {
+        return listId;
+    }
+
+    public void setListId(int listId) {
+        this.listId = listId;
     }
 
     public String getDateFormatted() {
@@ -61,11 +101,11 @@ public class TideItem {
         this.time = time;
     }
 
-    public int getPredCm() {
+    public String getPredCm() {
         return predCm;
     }
 
-    public void setPredCm(int predCm) {
+    public void setPredCm(String predCm) {
         this.predCm = predCm;
     }
 

@@ -1,7 +1,9 @@
 package marmot.tidepredictor;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,6 +22,10 @@ public class ItemsActivity extends Activity implements AdapterView.OnItemClickLi
     private TextView titleTextView;
     private ListView itemsListView;
 
+    private TideListDB db;
+
+    private SharedPreferences savedValues;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,26 +37,24 @@ public class ItemsActivity extends Activity implements AdapterView.OnItemClickLi
         tideItems = new ArrayList<>();
 
         itemsListView.setOnItemClickListener(this);
-
         itemsListView.setFastScrollEnabled(true);
 
-        readXMLFile();
-    }
+        db = new TideListDB(this);
 
-
-    public void readXMLFile() {
-        Log.d("TIDES", "Trying to read xml file");
-
-        try {
-            tideItems = new ParseXML().parse(this);
-        } catch (Exception e) {
-            Log.d("TIDES", e.getMessage());
-        }
+        savedValues = PreferenceManager.getDefaultSharedPreferences(this);
 
         updateDisplay();
     }
 
     public void updateDisplay() {
+        String location = savedValues.getString("location", "");
+        if (location == "") {
+            Log.e("ERROR", "Found nothing");
+            return;
+        }
+
+        tideItems = db.getTideItems(location);
+
         if (tideItems == null) {
             titleTextView.setText(R.string.item_error);
             return;

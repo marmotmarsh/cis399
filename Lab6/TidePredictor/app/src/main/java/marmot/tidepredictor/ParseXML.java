@@ -17,10 +17,12 @@ import java.util.ArrayList;
 
 public class ParseXML {
     private static final String ns = null;
+    private int listId;
 
-    public ArrayList<TideItem> parse(Activity main) throws XmlPullParserException, IOException {
+    public ArrayList<TideItem> parse(Activity main, int listId, int xmlFile) throws XmlPullParserException, IOException {
+        this.listId = listId;
         try {
-            XmlResourceParser parser = main.getResources().getXml(R.xml.florence);
+            XmlResourceParser parser = main.getResources().getXml(xmlFile);
             parser.next();
             return readFeed(parser);
         } finally {
@@ -84,7 +86,7 @@ public class ParseXML {
                     skip(parser);
             }
         }
-        return new TideItem(date, day, time, predCm, type);
+        return new TideItem(listId, date, day, time, predCm, type);
     }
 
     private String readDate(XmlResourceParser parser) throws IOException, XmlPullParserException {
