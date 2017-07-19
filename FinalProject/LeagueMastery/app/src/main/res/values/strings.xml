@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">League of Legends Mastery</string>
+
+    <!-- Main Activity -->
+
+    <string name="username_label">Enter username</string>
+    <string name="show_masteries_button">Show Masteries</string>
+
+    <!-- ListView Activity -->
+
+    <string name="masteries_title">Masteries</string>
+
+    <string name="item_error">Nothing was found</string>
+
+</resources>
