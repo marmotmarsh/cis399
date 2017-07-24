@@ -11,9 +11,10 @@ import java.util.ArrayList;
 
 /**
  * Created by Holden on 7/15/2017.
+ *
  */
 
-// Information copied from https://github.com/googlesamples/android-BasicSyncAdapter/blob/master/Application/src/main/java/com/example/android/basicsyncadapter/net/FeedParser.java
+// Information borrowed from https://github.com/googlesamples/android-BasicSyncAdapter/blob/master/Application/src/main/java/com/example/android/basicsyncadapter/net/FeedParser.java
 
 public class ParseXML {
     private static final String ns = null;
