@@ -1,6 +1,7 @@
 package marmot.leaguemastery;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -17,7 +18,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 
@@ -31,44 +31,38 @@ public class MainActivity extends Activity implements Button.OnClickListener, Ed
     // Query information
 
     private RequestQueue requestQueue;
-    private String summonerURL;
-    private String masteriesURL;
 
     // Other Local Information
 
-    private String username;
+    private String player;
+    private JSONArray jsonArray;
 
     // Saved Information
 
     private SharedPreferences savedValues;
-
-    // Constants
-
-    private final String API_KEY = "RGAPI-fce3c9c0-5ff5-4793-a4ff-87cd10d5b328";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        usernameEditText = findViewById(R.id.usernameEditText);
+        usernameEditText = (EditText) findViewById(R.id.usernameEditText);
         showMasteriesButton = findViewById(R.id.showMasteriesButton);
 
-        username = "";
+        player = "";
 
-        requestQueue = Volley.newRequestQueue(this);
-        summonerURL = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/metalmarsh89?api_key=" + API_KEY;
-        masteriesURL = "https://na1.api.riotgames.com/lol/champion-mastery/v3/champion-masteries/by-summoner/73043813?api_key=" + API_KEY;
+        requestQueue = MySingleton.getInstance(this.getApplicationContext()).getRequestQueue();
 
         savedValues = PreferenceManager.getDefaultSharedPreferences(this);
 
-        checkForInformation();
+        showMasteriesButton.setOnClickListener(this);
+        usernameEditText.setOnEditorActionListener(this);
     }
 
     @Override
     public void onPause() {
         SharedPreferences.Editor editor = savedValues.edit();
-        editor.putString("username", username);
+        editor.putString("player", player);
         editor.commit();
 
         super.onPause();
@@ -78,7 +72,7 @@ public class MainActivity extends Activity implements Button.OnClickListener, Ed
     public void onResume() {
         super.onResume();
 
-        username = savedValues.getString("username", "");
+        player = savedValues.getString("player", "");
     }
 
     @Override
@@ -92,7 +86,13 @@ public class MainActivity extends Activity implements Button.OnClickListener, Ed
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.showMasteriesButton:
-                //TODO: New Class
+                SharedPreferences.Editor editor = savedValues.edit();
+                editor.putString("player", usernameEditText.getText().toString());
+                editor.commit();
+
+                Log.d("Button Clicked", "Going to get info");
+
+                startActivity(new Intent(getApplicationContext(), ListViewActivity.class));
                 break;
         }
     }
@@ -102,7 +102,7 @@ public class MainActivity extends Activity implements Button.OnClickListener, Ed
         if (actionId == EditorInfo.IME_ACTION_DONE) {
             switch (view.getId()) {
                 case R.id.usernameEditText:
-                    username = usernameEditText.getText().toString();
+                    player = usernameEditText.getText().toString();
                     break;
             }
 
@@ -111,16 +111,15 @@ public class MainActivity extends Activity implements Button.OnClickListener, Ed
         return false;
     }
 
-    public void checkForInformation() {
-        // Request a string response from the provided URL.
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, masteriesURL,
+    private void getInformation(String url) {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         // Display the first 500 characters of the response string.
                         // Log.d("RESPONSE", "Response is: "+ response.toString());
 
-                        jsonResponse(response);
+                        jsonArray = jsonResponse(response);
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -130,18 +129,21 @@ public class MainActivity extends Activity implements Button.OnClickListener, Ed
         });
 
         // Add the request to the RequestQueue.
-        requestQueue.add(stringRequest);
+        MySingleton.getInstance(this).addToRequestQueue(stringRequest);
     }
 
-    public void jsonResponse(String response) {
+    public JSONArray jsonResponse(String response) {
         try {
 
             JSONArray obj = new JSONArray(response);
 
-            Log.d("My App", obj.toString());
+            Log.d("RESPONSE", obj.toString());
 
+            return obj;
         } catch (Throwable t) {
             Log.e("My App", "Could not parse malformed JSON: \"" + response + "\"");
+
+            return null;
         }
     }
 }

@@ -1,5 +1,13 @@
 package marmot.leaguemastery;
 
+import android.util.Log;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 /**
  * Created by Holden on 7/18/2017.
  *
@@ -80,6 +88,47 @@ public class ChampionMastery {
         this.championPointsUntilNextLevel = championPointsUntilNextLevel;
         this.championPointsSinceLastLevel = championPointsSinceLastLevel;
         this.lastPlayTime = lastPlayTime;
+    }
+
+    public static ChampionMastery fromJsonHelper(JSONObject json) {
+        ChampionMastery mastery = new ChampionMastery();
+        try {
+            mastery.setChestGranted(json.getString("chestGranted"));
+            mastery.setChampionLevel(json.getString("championLevel"));
+            mastery.setChampionPoints(json.getString("championPoints"));
+            mastery.setChampionId(json.getString("championId"));
+            mastery.setPlayerId(json.getString("playerId"));
+            mastery.setChampionPointsUntilNextLevel(json.getString("championPointsUntilNextLevel"));
+            mastery.setChampionPointsSinceLastLevel(json.getString("championPointsSinceLastLevel"));
+            mastery.setLastPlayTime(json.getString("lastPlayTime"));
+        } catch (JSONException e) {
+            Log.e("Error", e.toString());
+
+            return null;
+        }
+
+        return mastery;
+    }
+
+    public static ArrayList<ChampionMastery> fromJson(JSONArray jsonArray) {
+        JSONObject jsonObject;
+        ArrayList<ChampionMastery> masteries = new ArrayList<>(jsonArray.length());
+
+        for (int i=0; i < jsonArray.length(); i++) {
+            try {
+                jsonObject = jsonArray.getJSONObject(i);
+            } catch (Exception e) {
+                Log.e("Error", e.toString());
+                continue;
+            }
+
+            ChampionMastery mastery = ChampionMastery.fromJsonHelper(jsonObject);
+            if (mastery != null) {
+                masteries.add(mastery);
+            }
+        }
+
+        return masteries;
     }
 
     // Getters and Setters
