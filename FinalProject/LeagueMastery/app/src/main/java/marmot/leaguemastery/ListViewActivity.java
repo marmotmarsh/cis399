@@ -49,7 +49,7 @@ public class ListViewActivity extends Activity {
 
     // Constants
 
-    private final String API_KEY = "RGAPI-4672fc30-3ee1-4c21-864b-dfc3896ac18e";
+    private final String API_KEY = "RGAPI-2182213e-8a80-464e-b39b-715d3eb064ed";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
